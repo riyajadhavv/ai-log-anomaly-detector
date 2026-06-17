@@ -1,3 +1,38 @@
+# 🔍 AI Log Anomaly Detector
+
+ML pipeline to detect anomalies in AWS CloudWatch server logs using Isolation Forest — deployed as a FastAPI service on EC2.
+
+## 🧩 Overview
+
+DevOps teams waste hours manually tailing logs to find incidents. This project automates that process — ingesting AWS CloudWatch logs, extracting features, classifying anomalies using Isolation Forest, and triggering automated alerts proactively.
+
+Built to bridge cloud operations with ML capabilities — no labeled data needed.
+
+
+
+
+
+## ⚙️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| Python (boto3) | CloudWatch log ingestion |
+| Pandas | Feature extraction & data processing |
+| Scikit-learn | Isolation Forest anomaly detection |
+| FastAPI | REST API serving the ML model |
+| AWS EC2 | Deployment environment |
+| AWS CloudWatch | Log source |
+
+## 🚀 Features
+
+✅ Automated log ingestion from AWS CloudWatch using boto3  
+✅ Feature engineering — extracts error rate, response time, request count from raw logs  
+✅ Unsupervised ML — no labeled data needed, Isolation Forest learns normal behavior  
+✅ REST API endpoint — `POST /analyze` returns anomaly flag and confidence score  
+✅ Automated alerts — triggered immediately on anomaly detection  
+✅ Deployed on EC2 — always running, no manual intervention  
+
+
 ## 🔧 Setup & Usage
 
 **Prerequisites**
