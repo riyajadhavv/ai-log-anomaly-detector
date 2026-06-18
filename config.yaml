@@ -1,0 +1,21 @@
+aws:
+  region: us-east-1
+  cloudwatch:
+    default_log_group: /aws/ec2/app-logs
+    default_hours: 1
+
+model:
+  contamination: 0.05
+  threshold: -0.1
+  n_estimators: 100
+
+alerts:
+  enabled: true
+  severity_levels:
+    critical: -0.4
+    high: -0.2
+    medium: -0.1
+
+api:
+  host: 0.0.0.0
+  port: 8000
